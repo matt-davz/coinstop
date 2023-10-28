@@ -7,7 +7,6 @@
   color: var(--textColor);
   font-family: 'Inconsolata';
   font-weight: 400;
-  background-color: var(--background);
 }
 
 h1, h2, h3, h4, h5 {

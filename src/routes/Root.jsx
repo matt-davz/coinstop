@@ -10,11 +10,12 @@ const Root = () => {
     <>
     <nav className='nav-bar'>
         <div className="nav-header">
-          <NavLink className='title' to={'/'}><h1 >Coin Stop</h1></NavLink>
+          <NavLink className='title' to={'/'}><h1 className='title'>Coin Stop</h1></NavLink>
           <img className="logo" src={logo} />
         </div>
         <hr></hr>
         <div className="nav-items-container">
+          <NavLink to={'/'}><Title >Home</Title></NavLink>
           <NavLink to={'/Coins'}><Title >Coins</Title></NavLink>
           <NavLink to={'/News'}><Title >News</Title></NavLink>
           <NavLink to={'/Exchanges'}><Title >Exchanges</Title></NavLink>
