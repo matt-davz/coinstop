@@ -1,0 +1,6 @@
+export {default as Root} from "./Root"
+export {default as Home} from "./Home"
+export {default as News} from "./News"
+export {default as Exchanges} from "./Exchanges"
+export {default as Coins} from "./Coins"
+export {default as Portfolio} from "./Portfolio"
