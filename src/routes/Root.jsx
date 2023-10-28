@@ -1,6 +1,6 @@
 import { Avatar, Typography } from 'antd'
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 import logo from "../assets/logo.svg"
 
 const {Title} = Typography
@@ -9,12 +9,21 @@ const Root = () => {
   return (
     <>
     <nav className='nav-bar'>
-        <div className="logo">
-            <img src={logo} alt="" />
+        <div className="nav-header">
+          <NavLink className='title' to={'/'}><h1 >Coin Stop</h1></NavLink>
+          <img className="logo" src={logo} />
         </div>
-        <Title>Coin Stop</Title>
+        <hr></hr>
+        <div className="nav-items-container">
+          <NavLink to={'/Coins'}><Title >Coins</Title></NavLink>
+          <NavLink to={'/News'}><Title >News</Title></NavLink>
+          <NavLink to={'/Exchanges'}><Title >Exchanges</Title></NavLink>
+          <NavLink to={'/Portfolio'}><Title >Portfolio</Title></NavLink>
+        </div>
     </nav>
-    <Outlet />
+    <section className='outlet-display'>
+      <Outlet />
+    </section>
     </>
   )
 }
