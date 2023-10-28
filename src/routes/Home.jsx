@@ -9,6 +9,9 @@ const Home = () => {
   const {data, isFetching} = useGetCryptosQuery()
   const stats = data ?.data ?.stats
   
+  if(isFetching){
+    return 'Loading...'
+  }
   return (
     <>
       <Title level={2}>Stats</Title>
