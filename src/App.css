@@ -69,11 +69,23 @@ small {font-size: 0.750rem; /* 12px */}
   flex-grow: 1;
   left: 0;
   top: 0;
+  box-shadow:2px 0px 36px 4px rgba(0,0,0,0.81);
+  transition: all 300ms ease-in-out;
+}
+
+.nav-bar.active{
+  height: 30vh;
+  width: calc(var(--nav-width)*0.33)
 }
 
 .nav-items-container{
   padding-left: 2rem;
 }
+
+.nav-items-container a {
+  text-decoration: none;
+}
+
 
 
 .outlet-display{
@@ -84,6 +96,9 @@ small {font-size: 0.750rem; /* 12px */}
   flex-direction: column;
   width: 70vw;
   padding: 0 2rem;
+  color: black;
 }
 
-
+.outlet-display h1{
+  color: black;
+}

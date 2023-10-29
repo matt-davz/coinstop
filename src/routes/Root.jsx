@@ -15,11 +15,11 @@ const Root = () => {
         </div>
         <hr></hr>
         <div className="nav-items-container">
-          <NavLink to={'/'}><Title >Home</Title></NavLink>
-          <NavLink to={'/Coins'}><Title >Coins</Title></NavLink>
-          <NavLink to={'/News'}><Title >News</Title></NavLink>
-          <NavLink to={'/Exchanges'}><Title >Exchanges</Title></NavLink>
-          <NavLink to={'/Portfolio'}><Title >Portfolio</Title></NavLink>
+          <NavLink to={'/'}><h3 className='tabs'>Home</h3></NavLink>
+          <NavLink to={'/Coins'}><h3 >Coins</h3></NavLink>
+          <NavLink to={'/News'}><h3 >News</h3></NavLink>
+          <NavLink to={'/Exchanges'}><h3 >Exchanges</h3></NavLink>
+          <NavLink to={'/Portfolio'}><h3 >Portfolio</h3></NavLink>
         </div>
     </nav>
     <section className='outlet-display'>
