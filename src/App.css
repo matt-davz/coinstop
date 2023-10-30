@@ -102,3 +102,16 @@ small {font-size: 0.750rem; /* 12px */}
 .outlet-display h1{
   color: black;
 }
+
+.home-headings{
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-headings a{
+  color: var(--secondary);
+}
+
+.home-headings h3{
+  color: var(--primary);
+}

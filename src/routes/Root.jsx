@@ -18,7 +18,6 @@ const Root = () => {
           <NavLink to={'/'}><h3 className='tabs'>Home</h3></NavLink>
           <NavLink to={'/Coins'}><h3 >Coins</h3></NavLink>
           <NavLink to={'/News'}><h3 >News</h3></NavLink>
-          <NavLink to={'/Exchanges'}><h3 >Exchanges</h3></NavLink>
           <NavLink to={'/Portfolio'}><h3 >Portfolio</h3></NavLink>
         </div>
     </nav>
