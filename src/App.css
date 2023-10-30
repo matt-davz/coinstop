@@ -115,3 +115,26 @@ small {font-size: 0.750rem; /* 12px */}
 .home-headings h3{
   color: var(--primary);
 }
+
+
+
+.coin-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coin-title{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.coin-stats{
+  text-align: center;
+  padding: 2rem;
+}
+
+.coin-info-container{
+  padding: 0 4rem;
+}
