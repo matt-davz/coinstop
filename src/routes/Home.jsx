@@ -6,6 +6,7 @@ import { prettyDigits } from 'prettydigits'
 import DisplayCoins from '../../components/DisplayCoins'
 import Stats from '../../components/Stats'
 import { Link } from 'react-router-dom'
+import { DisplayNews } from '../../components'
 const {Title} = Typography
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
         <Title level={2}>Crypto News</Title>
         <Link to={'/news'}><Title level={3}>See More</Title></Link>
       </div>
+      <DisplayNews simplified/>
     </>
   )
 }

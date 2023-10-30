@@ -138,3 +138,11 @@ small {font-size: 0.750rem; /* 12px */}
 .coin-info-container{
   padding: 0 4rem;
 }
+
+.article-title{
+  text-align: center;
+}
+
+.article-description{
+  height: 40rem;
+}

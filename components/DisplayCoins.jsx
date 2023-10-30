@@ -4,27 +4,14 @@ import { Avatar, Card, Col, Row} from 'antd'
 import { prettyDigits } from 'prettydigits'
 import { Link } from 'react-router-dom'
 import millify from 'millify'
+import Loader from './Loader'
 
 const DisplayCoins = ({simplified}) => {
   const count = simplified ? 10 : 100;
   const {data , isFetching} = useGetCryptosQuery(count)
   const coins = data ?. data ?. coins
 
-  if (isFetching) { // loading state
-    const componentsToRender = Array(count).fill(null);
-    
-    return (
-      <Row gutter={[32,32]}>
-        {componentsToRender.map((e,i) => (
-          <Col key={i} span={6}>
-            <Card loading={true}>
-            </Card>
-          </Col>
-        ))}
-
-      </Row>
-    )
-  }
+  if (isFetching) return (<Loader count={count}/>)
 
   
   return ( 
