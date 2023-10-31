@@ -5,7 +5,7 @@ import { prettyDigits } from 'prettydigits'
 
 
 const  Stats = () => {
-  const {data, isFetching} = useGetCryptosQuery({count:0, term: '', tags: ''})
+  const {data, isFetching} = useGetCryptosQuery({count:1, term: '', tags: ''})
   const stats = data ?. data ?. stats
 
   if(isFetching) return 'loading...'

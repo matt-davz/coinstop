@@ -29,7 +29,8 @@ const DisplayCoins = ({simplified, term, tags}) => {
               extra={coin.rank}
               >
                 <Avatar src={coin.iconUrl} />
-                <p>Price USD: {prettyDigits(coin.price, {precision: 1})}</p>
+                <p>Price USD: </p>
+                <p>{prettyDigits(coin.price, {precision: 1})}</p>
                 <p>Market Cap: {prettyDigits(coin.marketCap)}</p>
                 <p style={coin.change > 0 ? {color: "green"} : {color: "red"}  }>Change in %: {prettyDigits(coin.change, {precision: 1})}</p>
                 <p>24Hr Vol: {prettyDigits(coin["24hVolume"],{precision: 1})}</p>
