@@ -1,11 +1,10 @@
 import React from 'react'
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
-import { Avatar, Card, Col, Divider, Row, Typography } from 'antd';
-import { Link } from 'react-router-dom';
-import { prettyDigits } from 'prettydigits';
+import {Card, Col, Divider, Row } from 'antd';
+
 import Loader from './Loader';
 
-const {Title} = Typography;
+
 
 const DisplayNews = ({simplified}) => {
   const count = simplified ? 11 : 100;
@@ -30,7 +29,7 @@ const DisplayNews = ({simplified}) => {
                 >
                   <Row gutter={[5,5]}>
                     <Col span={12}><p style={{margin: 0, fontWeight:"bold"}}>{article.name}</p></Col>
-                    <Col span={12}><img style={{margin:'auto'}} src={article.image.thumbnail.contentUrl} /></Col>
+                    <Col span={12}><img style={{height:'100%',width:'100%'}} src={article.image.thumbnail.contentUrl} /></Col>
                   </Row>
                   <Divider/>
                   
