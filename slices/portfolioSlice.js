@@ -2,19 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 import { prettyDigits } from "prettydigits";
 
 const obj = [{
-    id: 1,
+    id: '1',
     name: "Test",
     balance: 100,
     change: 10
 },
 {   
-    id: 2,
+    id: '2',
     name: "Test2",
     balance: 200,
     change: prettyDigits(-0.0034)
 },
 {
-    id: 3,
+    id: '3',
     name: "Test2",
     balance: 0,
     change: 0

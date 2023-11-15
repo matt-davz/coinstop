@@ -29,11 +29,10 @@ const Portfolio = () => {
   const [clicked,setClicked] = useState(false)
   const [name,setName] = useState('');
   const dispatch = useDispatch();
+
   const handleClick = () => {
     setClicked(!clicked)
   }
-
-  console.log(portfolio)
 
   const handleChange = (e) => {
     setName(e.target.value)
@@ -43,7 +42,7 @@ const Portfolio = () => {
     e.preventDefault();
     dispatch(createPortfolio({ name: name, balance: 0, change: 0 }));
     setClicked(false);
-    setPortfolioName('');
+    setName('');
   };
 
   return (
@@ -54,7 +53,7 @@ const Portfolio = () => {
     <h3>Other Portfolios</h3>
     <Card>
         {portfolio.map((item) => (
-            <DisplayPorfolios name={item.name} balance={item.balance} change={item.change}/>
+            <DisplayPorfolios key={item.id} id={item.id} name={item.name} balance={item.balance} change={item.change}/>
         ))}
     </Card>
     <button className='add-portfolio' onClick={handleClick}/>
