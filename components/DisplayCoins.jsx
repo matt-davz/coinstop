@@ -3,12 +3,10 @@ import { useGetCryptosQuery } from '../services/cryptoApi'
 import { Avatar, Card, Col, Row} from 'antd'
 import { prettyDigits } from 'prettydigits'
 import { Link } from 'react-router-dom'
-import millify from 'millify'
 import Loader from './Loader'
 
 const DisplayCoins = ({simplified, term, tags}) => {
-  
-  console.log(`term: ${term} tags: ${tags}`)
+
   const count = simplified ? 10 : 100;
   const {data , isFetching} = useGetCryptosQuery({count: count, term: term, tags:tags})
   if (isFetching) return (<Loader count={count}/>)
@@ -16,8 +14,8 @@ const DisplayCoins = ({simplified, term, tags}) => {
   
   const coins = data ?. data ?. coins
   
-  console.log(coins)
-
+  //write a function that will give me a random number between 0 and 100
+  
   
   return ( 
     <Row gutter={[32,32]} >

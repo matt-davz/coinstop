@@ -7,14 +7,17 @@ import Loader from './Loader';
 
 
 const DisplayNews = ({simplified}) => {
-  const count = simplified ? 11 : 100;
-  const {data: cryptoNews, isFetching} = useGetCryptoNewsQuery({newsCategory: 'Cryptocurrencies', count: count })
+  const count = simplified ? 10 : 100;
+  const {data: cryptoNews, isFetching, isError} = useGetCryptoNewsQuery({newsCategory: 'Cryptocurrencies', count: count })
   
 
   if (isFetching) return (<Loader count={count}/>)
-
+  if (isError) {
+    return (<h1>Something went wrong...</h1>)
+  }
+  
   const articles = cryptoNews ?. value
-
+  
   
   return ( 
     <>

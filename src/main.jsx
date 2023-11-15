@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
-import {Root, Home, News, Portfolio, Coins, Coin} from "./routes"
+import {Root, Home, News, Portfolio, Coins, Coin, Portfolios} from "./routes"
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import store from '../store/store.js'
 
@@ -14,7 +14,7 @@ const router = createBrowserRouter(
       <Route path='/coins' element={<Coins/>}/>
       <Route path='coin/:coinId' element={<Coin/>} ></Route>
       <Route path='/news' element={<News />}/>
-      <Route path='/portfolio' element={<Portfolio />}/>
+      <Route path='/portfolios' element={<Portfolios />}/>
     </Route>
   )
 )

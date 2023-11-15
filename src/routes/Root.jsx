@@ -3,7 +3,7 @@ import React from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import logo from "../assets/logo.svg"
 
-const {Title} = Typography
+
 
 const Root = () => {
   return (
@@ -18,7 +18,7 @@ const Root = () => {
           <NavLink to={'/'}><h3 className='tabs'>Home</h3></NavLink>
           <NavLink to={'/Coins'}><h3 >Coins</h3></NavLink>
           <NavLink to={'/News'}><h3 >News</h3></NavLink>
-          <NavLink to={'/Portfolio'}><h3 >Portfolio</h3></NavLink>
+          <NavLink to={'/Portfolios'}><h3>Portfolios</h3></NavLink>
         </div>
     </nav>
     <section className='outlet-display'>
