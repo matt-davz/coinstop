@@ -1,6 +1,8 @@
 import React from 'react'
 
 const DisplayPorfolios = ({name,balance,change}) => {
+    if(!balance) balance = 'N/A'
+    if(!change) change = 'N/A'
 
     return (
         <>
@@ -8,7 +10,7 @@ const DisplayPorfolios = ({name,balance,change}) => {
             <h5 style={{margin: '0'}}>{name}</h5>
             <div className='portfolios-info'>
                 <p>{balance+' $'}</p>
-                <p>{change ? `${change}%`: `-${change}%`}</p>
+                <p>{change ? `${(change)}%`: `-${change}%`}</p>
             </div>
         </div>
         </>

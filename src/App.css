@@ -158,6 +158,7 @@ small {font-size: 0.750rem; /* 12px */}
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px black;
+  cursor: pointer;
 }
 
 .portfolios-container:last-of-type {
@@ -181,4 +182,11 @@ small {font-size: 0.750rem; /* 12px */}
   background-repeat: no-repeat;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.portoflio-form{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
