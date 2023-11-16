@@ -40,10 +40,16 @@ const Portfolio = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(createPortfolio({ name: name, balance: 0, change: 0 }));
-    setClicked(false);
-    setName('');
+    const isNameExists = portfolio.some((item) => item.name.toLowerCase() === name);
+    if (isNameExists) {
+        alert('Portfolio name already exists!');
+    } else {
+        dispatch(createPortfolio({ name: name, balance: 0, change: 0, id: Date.now() }));
+        setClicked(false);
+        setName('');
+    }
   };
+
 
   return (
     <>
@@ -58,7 +64,7 @@ const Portfolio = () => {
     </Card>
     <button className='add-portfolio' onClick={handleClick}/>
     <Modal title="Name Your Portfolio" open={clicked} onOk={handleSubmit} onCancel={handleClick}>
-        <form action="" className='portoflio-form'>
+        <form action="" className='portoflio-form' onSubmit={(e) => e.preventDefault()}>
             <input type="text" onChange={handleChange} value={name}/>
         </form>
     </Modal>

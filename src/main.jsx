@@ -15,7 +15,7 @@ const router = createBrowserRouter(
       <Route path='coin/:coinId' element={<Coin/>} ></Route>
       <Route path='/news' element={<News />}/>
       <Route path='/portfolios' element={<Portfolios />}/>
-      <Route path='/portfolio/:portfolioId' element={<Portfolio/>}/>
+      <Route path='/portfolio/:portfolioName' element={<Portfolio/>}/>
     </Route>
   )
 )

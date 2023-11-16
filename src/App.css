@@ -154,10 +154,22 @@ small {font-size: 0.750rem; /* 12px */}
 }
 
 .portfolios-container{
+  border-bottom: solid 1px black;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.portfolios-container svg{
+  cursor: pointer;
+}
+
+.portfolios-info{
+  width: 96%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px black;
+  
   cursor: pointer;
 }
 
@@ -165,7 +177,7 @@ small {font-size: 0.750rem; /* 12px */}
   border-bottom: none;
 }
 
-.portfolios-info{
+.portfolios-stats{
   display: flex;
   gap: 2.5rem;
   align-items: center;

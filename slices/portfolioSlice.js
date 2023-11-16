@@ -5,25 +5,28 @@ const obj = [{
     id: '1',
     name: "Test",
     balance: 100,
-    change: 10
+    change: 10,
+    highlighted: true,
 },
 {   
     id: '2',
     name: "Test2",
     balance: 200,
-    change: prettyDigits(-0.0034)
+    change: prettyDigits(-0.0034),
+    highlighted: false,
 },
 {
     id: '3',
     name: "Test2",
     balance: 0,
-    change: 0
+    change: 0,
+    highlighted: false,
 }
 ]
 
 const portfoliosSlice = createSlice({
   name: "portfolios",
-  initialState: obj,
+  initialState: [],
   reducers: {
     createPortfolio: (state, action) => {
       state.push(action.payload);
@@ -32,10 +35,17 @@ const portfoliosSlice = createSlice({
       return state.filter(portfolio => portfolio.id !== action.payload);
     },
     toggleHighlight: (state, action) => {
-      const index = state.findIndex(portfolio => portfolio.id === action.payload);
-      if (index !== -1) {
-        state[index].highlighted = !state[index].highlighted;
-      }
+        const id  = action.payload;
+
+        const index = state.findIndex(portfolio => portfolio.id === id);
+
+        state.forEach((portfolio, i) => {
+            if (i !== index) {
+                portfolio.highlighted = false;
+            } else {
+                portfolio.highlighted = true;
+            }
+        });
     },
     buyTransaction: (state, action) => {
       const { portfolioId, transaction } = action.payload;
@@ -55,6 +65,8 @@ const portfoliosSlice = createSlice({
 });
 
 export const { createPortfolio, removePortfolio, toggleHighlight, buyTransaction, sellTransaction } = portfoliosSlice.actions;
+
+export const selectPortfolios = (state) => state.portfolio;
 
 export default portfoliosSlice.reducer;
 
